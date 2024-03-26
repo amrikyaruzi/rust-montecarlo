@@ -1,14 +1,14 @@
 /*! Rust Implementation of R's RLE to estimate the maximum consecutive number of heads in 
  a coin toss experiment*/
- 
+
 use rand::prelude::*;
 use rand_distr::Binomial;
 use rayon::prelude::*;
 
 fn main() {
     // Parameters
-    let num_trials: usize = 1_000_000;
-    let seq_length: usize = 10_000;
+    let num_trials: usize = 1_000_000_000;
+    let seq_length: usize = 100;
     let prob_success: f64 = 0.5;
 
     // Create a binomial distribution
